@@ -61,11 +61,11 @@ while True:
     if qNo < qTotal:
         mcq = mcqList[qNo]
 
-        img, bbox = cvzone.putTextRect(img, mcq.question, [100, 100], 1, 1, offset=25, border=3)
-        img, bbox1 = cvzone.putTextRect(img, mcq.choice1, [100, 250], 1, 1, offset=25, border=3)
-        img, bbox2 = cvzone.putTextRect(img, mcq.choice2, [400, 250], 1, 1, offset=25, border=3)
-        img, bbox3 = cvzone.putTextRect(img, mcq.choice3, [100, 350], 1, 1, offset=25, border=3)
-        img, bbox4 = cvzone.putTextRect(img, mcq.choice4, [400, 350], 1, 1, offset=25, border=3)
+        img, bbox = cvzone.putTextRect(img, mcq.question, [100, 100], 2, 2, offset=25, border=3)
+        img, bbox1 = cvzone.putTextRect(img, mcq.choice1, [100, 250], 2, 2, offset=25, border=3)
+        img, bbox2 = cvzone.putTextRect(img, mcq.choice2, [400, 250], 2, 2, offset=25, border=3)
+        img, bbox3 = cvzone.putTextRect(img, mcq.choice3, [100, 350], 2, 2, offset=25, border=3)
+        img, bbox4 = cvzone.putTextRect(img, mcq.choice4, [400, 350], 2, 2, offset=25, border=3)
 
         if hands:
             lmList = hands[0]['lmList']
@@ -77,7 +77,7 @@ while True:
 
                 if mcq.userAns is not None:
                     print(mcq.userAns)
-                    time.sleep(0.3)
+                    time.sleep(5)
                     qNo += 1
     else:
         score = 0
